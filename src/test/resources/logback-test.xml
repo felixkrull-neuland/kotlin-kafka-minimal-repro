@@ -1,0 +1,12 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%date{"HH:mm:ss.SSS"} %highlight(%-5level) - %cyan([%file:%line]) - %message%n%xException</pattern>
+        </encoder>
+    </appender>
+    <logger name="org.apache.kafka.clients.consumer" level="TRACE"/>
+    <logger name="io.github.nomisRev" level="TRACE"/>
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
